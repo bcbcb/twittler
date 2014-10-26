@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>TWITTLER</title>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
   </head>
@@ -11,14 +12,27 @@
         var $body = $('body');
         $body.html('');
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+        var startAt = 0;
+        var endAt = 1;
+
+        var refreshTweets = function() {
+
+          endAt = streams.home.length;
+
+          for (var i = startAt; i < endAt; i++) {
+            var tweet = streams.home[i];
+            var $tweet = $('<div></div>');
+            $tweet.text('[' + i + '][' + tweet.created_at + ']  @' + tweet.user + ': ' + tweet.message);
+            $tweet.appendTo($body);            
+            startAt++;
+            console.log(startAt);
+
+          }
+
+        };
+
+        refreshTweets();
+        setInterval(refreshTweets, 1000);
 
       });
 
