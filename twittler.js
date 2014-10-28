@@ -1,4 +1,4 @@
-($(document).ready(function(){
+$(document).ready(function(){
 
   var $main = $('.main');
   $main.html('');
@@ -19,13 +19,14 @@
         '<span class="message">' + tweet.message + i +'</span>' +
         '</div>');
 
-      $main.prepend($tweet);
+      $main.prepend($tweet.hide());
+      $tweet.slideDown();
       startAt++;
 
     }
   };
 
   addNewTweets();
-  //setInterval(addNewTweets, 1000);
+  setInterval(addNewTweets, 1000);
 
-}))();
+});

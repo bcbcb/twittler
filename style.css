@@ -1,30 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Ek+Mukta:200,400,800);
+
+html {
+    padding: 0;
+    margin: 0;
+}
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #AEB4C8;
+    font-family: "Ek Muta", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    background-color: #cccccf;
     color: #333;
-    font-size: 1.2em;
+    letter-spacing: -0.02em;
+    padding: 0 0 2em;
+    margin: 0; 
 }
 
+@media(max-width:767px) {
+    body {
+        font-size: 20px;
+    }
+}
+@media(min-width:768px) {
+    body {
+        font-size: 24px;
+    }
+}
+@media(min-width:992px) {
+    body {
+        font-size: 28px;
+    }
+}
+
+
+.nav, .main {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 30em;
+}  
+
 .tweet {
-    padding: 0.6em 1em 0.9em;
+    padding: 0.8em 1em 0.9em;
     margin: 0.4em;
     border-radius: 0.5em;
-    background-color: #D7D8DE;
-    border: 1px solid #9099B5;
+    background-color: #ddd;
+    border: 1px solid #bbb;
 }
 
 .user {
     font-size: 0.8em;
-    font-weight: bold;
-    color: #1F263A ;
+    font-weight: 400;
+    color: #246 ;
 }
 
 .time {
     font-size: 0.7em;
-    color: #A5A8B1;
+    color: #aab;
 }
 .message {
     display: block;
     padding-top: 0.2em;
-    color: #161923;
+    color: #222;
+}
+
+
+.top {
+    background-color: #123;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    color: #abc;
+    letter-spacing: -0.0666em;
+    font-weight: 800;
 }
