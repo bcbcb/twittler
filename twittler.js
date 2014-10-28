@@ -1,56 +1,67 @@
+// heil twittler!
+
 $(document).ready(function(){
 
   var $main = $('.main');
+  var $subhead = $('.subhead');
   var tweets;  
   var lastTweetIndex; 
-  var totalTweets;
   var currentPage;
-
-  var addNewTweets = function() {
-
-    totalTweets = tweets.length;
-
-    for (var i = lastTweetIndex; i < totalTweets; i++) {
-      var tweet = tweets[i];
-
-      var $tweet = $('<div class="tweet">' +
-        '<span class="user" data-user="' + tweet.user + '">@' + tweet.user + '</span>' + 
-        '<span class="time">' + tweet.created_at + '</span>' +
-        '<span class="message">' + tweet.message + i +'</span>' +
-        '</div>');
-
-      $main.prepend($tweet.hide());
-      $tweet.slideDown();      
-      lastTweetIndex++;
-    }
-
-    // TODO: this updates everytime for every username element 
-    $('.user').off("click").click(function() {
-      getPage( ($(this).data('user')) ) ;
-    });
-
-  };
 
   var getPage = function (page) {
     if (page !== currentPage) {
-      
-      // Clear current page
       currentPage = page;
+
+      // Clear current page
       $main.html('');
       lastTweetIndex = 0; 
 
       // Build new page of tweets
       tweets = page === 'home' ? streams.home : streams.users[page];
       addNewTweets();
+      $subhead.html(currentPage === 'home' ? '' : '<span class="page">' + currentPage + "'s tweets</span> " );
     }
   };
 
+  var addNewTweets = function() {
+    // Grab new tweets and add them to the page
+    // Start off from last tweet if 
+    for (var i = lastTweetIndex; i < tweets.length; i++) {
+      var tweet = tweets[i];
+
+      var $tweet = $('<div class="tweet">' +
+        '<span class="user" data-user="' + tweet.user + '">@' + tweet.user + '</span>' + 
+        '<span class="time">' + tweet.created_at + '<smaller>' + i + '</smaller></span>' +
+        '<span class="message">' + tweet.message + '</span>' +
+        '</div>');
+
+      $main.prepend($tweet.hide());
+      $tweet.slideDown();
+
+      // Keep track of the last tweet added
+      lastTweetIndex++;
+    }
+
+    // Event handler for username timelines
+    // (TODO: This updates everytime for every username element 
+    //       It only needs to apply to the new tweets.)
+    $('.user').off("click").click(function() {
+      getPage( ($(this).data('user')) ) ;
+    });
+
+    // Make a header
+  };
+
+
+  // Show all tweets on first load
   getPage('home');
+
+  // Refresh tweets
   setInterval(addNewTweets, 2000);
 
+  // Make header link to homepage
   $('h1').click(function(){
     getPage('home');
   });
-
 
 });
