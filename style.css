@@ -1,5 +1,30 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: #eee;
-    color: #999;
+    background-color: #AEB4C8;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.tweet {
+    padding: 0.6em 1em 0.9em;
+    margin: 0.4em;
+    border-radius: 0.5em;
+    background-color: #D7D8DE;
+    border: 1px solid #9099B5;
+}
+
+.user {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #1F263A ;
+}
+
+.time {
+    font-size: 0.7em;
+    color: #A5A8B1;
+}
+.message {
+    display: block;
+    padding-top: 0.2em;
+    color: #161923;
 }
