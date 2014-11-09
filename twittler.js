@@ -1,3 +1,5 @@
+var visitor;
+
 $(document).ready(function(){
 
   var $main = $('.main');
@@ -61,6 +63,21 @@ $(document).ready(function(){
   // Make header link to homepage
   $('h1').click(function(){
     getPage('home');
+  });
+
+  ///////////////////////////////////////////////////////////
+
+  // New user tweets
+
+  $("form").submit(function( event ){
+    event.preventDefault();
+
+    visitor = $("#username").val();
+    streams.users[visitor] = [];
+    console.log(visitor);
+
+    writeTweet( $("#usertweet").val() );
+
   });
 
 });
