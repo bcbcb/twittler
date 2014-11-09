@@ -1,9 +1,7 @@
-// heil twittler!
-
 $(document).ready(function(){
 
   var $main = $('.main');
-  var $subhead = $('.subhead');
+  var $header = $('.header');
   var tweets;  
   var lastTweetIndex; 
   var currentPage;
@@ -19,7 +17,9 @@ $(document).ready(function(){
       // Build new page of tweets
       tweets = page === 'home' ? streams.home : streams.users[page];
       addNewTweets();
-      $subhead.html(currentPage === 'home' ? '' : '<span class="page">' + currentPage + "'s tweets</span> " );
+
+      // Show username in the header  
+      $header.html(currentPage === 'home' ? '' : '<span class="page">' + currentPage + "'s tweets</span> " );
     }
   };
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
       var $tweet = $('<div class="tweet">' +
         '<span class="user" data-user="' + tweet.user + '">@' + tweet.user + '</span>' + 
-        '<span class="time">' + tweet.created_at + '<smaller>' + i + '</smaller></span>' +
+        '<span class="time">' + moment(tweet.created_at).fromNow() + '</span>' +
         '<span class="message">' + tweet.message + '</span>' +
         '</div>');
 
@@ -49,7 +49,6 @@ $(document).ready(function(){
       getPage( ($(this).data('user')) ) ;
     });
 
-    // Make a header
   };
 
 
@@ -57,7 +56,7 @@ $(document).ready(function(){
   getPage('home');
 
   // Refresh tweets
-  setInterval(addNewTweets, 2000);
+  setInterval(addNewTweets, 3000);
 
   // Make header link to homepage
   $('h1').click(function(){

@@ -5,7 +5,7 @@ html {
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
-    background-color: #cccccf;
+    background-color: #eee;
     color: #333;
     letter-spacing: -0.02em;
     padding: 0 0 2em;
@@ -29,7 +29,7 @@ body {
     }
 }
 
-.head, .subhead, .main {
+.logo, .header, .main {
     padding: 0 0.2em;
     margin: 0 auto;
     max-width: 30em;
@@ -63,7 +63,7 @@ body {
 
 
 .top {
-    background-color: #123;
+    background-color: #44AAEE;
     width: 100%;
     padding: 0;
     margin: 0 auto;
@@ -71,12 +71,13 @@ body {
 
 h1 {
     margin: 0;
-    color: #abc;
-    font-size: 1em;
+    color: #eee;
+    font-size: 1.3em;
     letter-spacing: -0.0666em;
-    font-weight: 800;
+    font-weight: bold;
     cursor: pointer;
 }
+
 .page {
     font-weight: bold;
     font-size: 1.3em;
