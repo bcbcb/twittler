@@ -29,7 +29,7 @@ body {
     }
 }
 
-.logo, .header, .main {
+.nav, .header, .main {
     padding: 0 0.2em;
     margin: 0 auto;
     max-width: 30em;
@@ -65,8 +65,9 @@ body {
 .top {
     background-color: #44AAEE;
     width: 100%;
-    padding: 0;
+    padding: 0.1em;
     margin: 0 auto;
+    height: 1.5em;
 }
 
 h1 {
@@ -76,6 +77,7 @@ h1 {
     letter-spacing: -0.0666em;
     font-weight: bold;
     cursor: pointer;
+    float: left;
 }
 
 .page {
@@ -85,4 +87,19 @@ h1 {
     display: block;
     letter-spacing: -0.02em;
     margin: 0 auto;
+}
+
+.write {
+    float: right;
+    color: #fff;
+    background-color: #db1;
+    padding: 0.2em 0.7em;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    margin-top: 0.1em;
+    cursor: pointer;
+}
+
+form {
+    display: none;
 }

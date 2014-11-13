@@ -53,7 +53,6 @@ $(document).ready(function(){
 
   };
 
-
   // Show all tweets on first load
   getPage('home');
 
@@ -71,13 +70,9 @@ $(document).ready(function(){
 
   $("form").submit(function( event ){
     event.preventDefault();
-
     visitor = $("#username").val();
     streams.users[visitor] = [];
-    console.log(visitor);
-
     writeTweet( $("#usertweet").val() );
-
   });
 
 });
