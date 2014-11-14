@@ -4,6 +4,7 @@ $(document).ready(function(){
 
   var $main = $('.main');
   var $header = $('.header');
+  var $tweetbox = $('#usertweet');
   var tweets;  
   var lastTweetIndex; 
   var currentPage;
@@ -73,6 +74,7 @@ $(document).ready(function(){
     visitor = $("#username").val() || 'test';
     streams.users[visitor] = [];
     writeTweet( $("#usertweet").val() );
+    $tweetbox.val('');
   });
 
 });
