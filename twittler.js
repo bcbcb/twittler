@@ -71,10 +71,15 @@ $(document).ready(function(){
 
   $("form").submit(function( event ){
     event.preventDefault();
-    visitor = $("#username").val() || 'test';
-    streams.users[visitor] = [];
-    writeTweet( $("#usertweet").val() );
-    $tweetbox.val('');
+    var tweet = $("#usertweet").val();
+    if (tweet !== '') {
+      visitor = $("#username").val() || 'test';
+      streams.users[visitor] = streams.users[visitor] || [];
+      writeTweet( $("#usertweet").val() );
+      $tweetbox.val('');  
+      addNewTweets();
+    }
+    
   });
 
 });
