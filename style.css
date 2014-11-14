@@ -99,6 +99,10 @@ h1 {
     margin-top: 0.1em;
     cursor: pointer;
 }
+.write:hover {
+    background-color: #ec2;
+    color: #fff;
+}
 
 form {
     display: none;
