@@ -70,7 +70,7 @@ $(document).ready(function(){
 
   $("form").submit(function( event ){
     event.preventDefault();
-    visitor = $("#username").val();
+    visitor = $("#username").val() || 'test';
     streams.users[visitor] = [];
     writeTweet( $("#usertweet").val() );
   });

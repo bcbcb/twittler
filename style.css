@@ -89,21 +89,38 @@ h1 {
     margin: 0 auto;
 }
 
+/***** user tweets *****/
+
 .write {
-    float: right;
-    color: #fff;
-    background-color: #db1;
-    padding: 0.2em 0.7em;
-    border-radius: 0.5em;
-    font-size: 0.8em;
-    margin-top: 0.1em;
-    cursor: pointer;
-}
-.write:hover {
-    background-color: #ec2;
-    color: #fff;
 }
 
 form {
+    float:right;
+}
+
+form input, form button {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+form input {
+    border: none;
+    padding: 0.5em;
+}
+
+form button {
+    background-color: #ec2;
+    color: #222;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #fd3;
+}
+
+#username {
     display: none;
 }
