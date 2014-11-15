@@ -75,7 +75,7 @@ $(document).ready(function(){
     if (tweet !== '') {
       visitor = $("#username").val() || 'test';
       streams.users[visitor] = streams.users[visitor] || [];
-      writeTweet( $("#usertweet").val() );
+      writeTweet(tweet);
       $tweetbox.val('');  
       addNewTweets();
     }
