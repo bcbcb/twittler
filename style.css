@@ -72,12 +72,13 @@ body {
 
 h1 {
     margin: 0;
-    color: #eee;
+    color: #fff;
     font-size: 1.3em;
-    letter-spacing: -0.0666em;
+    letter-spacing: -0.03em;
     font-weight: bold;
     cursor: pointer;
     float: left;
+    font-style: italic;
 }
 
 .page {
@@ -115,6 +116,7 @@ form button {
     background-color: #ec3;
     color: #fff;
     cursor: pointer;
+    font-style: italic;
 }
 
 form button:hover {

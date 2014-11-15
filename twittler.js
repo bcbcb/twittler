@@ -73,7 +73,7 @@ $(document).ready(function(){
     event.preventDefault();
     var tweet = $("#usertweet").val();
     if (tweet !== '') {
-      visitor = $("#username").val() || 'test';
+      visitor = $("#username").val() || 'you';
       streams.users[visitor] = streams.users[visitor] || [];
       writeTweet(tweet);
       $tweetbox.val('');  
