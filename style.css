@@ -5,8 +5,8 @@ html {
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
-    background-color: #eee;
-    color: #333;
+    background-color: #dcdcdf;
+    color: #111;
     letter-spacing: -0.02em;
     padding: 0 0 2em;
     margin: 0; 
@@ -36,18 +36,28 @@ body {
 }  
 
 .tweet {
-    padding: 0.8em 1em 0.9em;
+    padding: 0.6em 1em 0.8em;
     margin: 0.4em 0;
     border-radius: 0.5em;
-    background-color: #ddd;
-    border: 1px solid #bbb;
+    background-color: #ececef;
+    transition: background-color 1s;
+
+}
+.tweet:hover {
+    background-color: #fff;
+    transition: 0.4s;
 }
 
 .user {
     font-size: 0.8em;
-    font-weight: 400;
-    color: #246;
+    color: #249;
     cursor: pointer;
+    transition: 0.2s;
+
+}
+.user:hover {
+    color: #44AAEE;
+    transition: 0.2s;
 }
 
 .time {
@@ -79,9 +89,16 @@ h1 {
     cursor: pointer;
     float: left;
     font-style: italic;
+    transition: 0.2s;
+}
+h1:hover {
+    letter-spacing: -0.02em;
+    font-style: normal;
+    transition: 0.2s;
 }
 
 .page {
+    color: #444;
     font-weight: bold;
     font-size: 1.3em;
     padding-top: 0.3em;
@@ -105,6 +122,8 @@ form input, form button {
     border: none;
     padding: 0.5em;
     border-radius: 0.5em;
+    outline: none;
+    
 }
 
 form input {
@@ -113,14 +132,18 @@ form input {
 }
 
 form button {
-    background-color: #ec3;
+    background-color: #ec0;
     color: #fff;
     cursor: pointer;
     font-style: italic;
+    font-weight: bold;
+    transition: 0.2s;
+
 }
 
 form button:hover {
     background-color: #fd3;
+    transition: 0.2s;
 }
 
 #username {
