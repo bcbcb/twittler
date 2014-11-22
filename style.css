@@ -89,10 +89,11 @@ h1 {
     cursor: pointer;
     float: left;
     font-style: italic;
-    transition: 3s;
+    transition: 1s;
 }
 h1:hover {
     letter-spacing: -0.05em;
+    font-style: normal;
     transition: 0.5s;
 }
 
