@@ -40,12 +40,12 @@ body {
     margin: 0.4em 0;
     border-radius: 0.5em;
     background-color: #ececef;
-    transition: background-color 1s;
+    transition: background-color 2s;
 
 }
 .tweet:hover {
     background-color: #fff;
-    transition: 0.4s;
+    transition: 0.1s;
 }
 
 .user {
@@ -89,12 +89,11 @@ h1 {
     cursor: pointer;
     float: left;
     font-style: italic;
-    transition: 0.2s;
+    transition: 3s;
 }
 h1:hover {
-    letter-spacing: -0.02em;
-    font-style: normal;
-    transition: 0.2s;
+    letter-spacing: -0.05em;
+    transition: 0.5s;
 }
 
 .page {
@@ -123,7 +122,7 @@ form input, form button {
     padding: 0.5em;
     border-radius: 0.5em;
     outline: none;
-    
+
 }
 
 form input {
